@@ -1,0 +1,241 @@
+form {
+  label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    span {
+      padding-top: 3px;
+      color: getColour(error);
+    }
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  margin: 20px;
+  background-color: getColour(white);
+  box-shadow: $shadow;
+
+  @media (max-width: $small-width) {
+    max-width: 90%;
+    padding: 20px !important;
+  }
+
+  input,
+  textarea {
+    border: $border;
+    padding: 5px;
+
+    @media (max-width: $small-width) {
+      border: $border-thin;
+    }
+  }
+}
+
+//Create post form
+
+.createForm {
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: flex-start;
+  gap: 20px;
+  width: 500px;
+
+  .userImageContainer {
+    flex: 1;
+
+    @media (max-width: $small-width) {
+      display: none;
+    }
+  }
+
+  .createFormInputs {
+    flex: 5;
+  }
+
+  #imageLabel,
+  #tagsLabel {
+    @media (max-width: $smallest-width) {
+      display: inline-flex !important;
+      width: 100%;
+    }
+  }
+
+  .createBtnContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    .addImageBtn,
+    .addTagsBtn {
+      background-color: getColour(grey);
+      width: 100%;
+      cursor: pointer;
+
+      @media (max-width: $smallest-width) {
+        display: none;
+      }
+    }
+
+    .createPostBtn {
+      border-radius: 2px;
+      background-color: getColour(green);
+      color: getColour(white);
+    }
+
+    div,
+    .createPostBtn {
+      border: none;
+      width: 100%;
+      padding: 5px;
+      text-align: center;
+      font-size: 14px;
+    }
+  }
+}
+
+// Edit form
+
+.editPostForm {
+  width: 400px;
+  height: 600px;
+  justify-content: center;
+
+  .updatePostBtn {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .deleteBtnContainer {
+    border-top: $border-thin;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .deleteBtn {
+    width: 90%;
+    background-color: getColour(black);
+  }
+}
+
+.editProfileForm {
+  width: 400px;
+  height: 400px;
+  justify-content: center;
+
+  .editProfileBtn {
+    width: 60%;
+    margin-top: 20px;
+    align-self: center;
+  }
+}
+// Login og register form
+
+.loginForm,
+.registerForm {
+  width: 400px;
+  padding: 10px 50px;
+  justify-content: center;
+
+  input {
+    margin-top: 5px;
+  }
+}
+
+.loginForm {
+  height: 500px;
+
+  .loginBtnContainer {
+    border-bottom: $border-thin;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .loginBtn {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .newAccountBtn {
+    background-color: getColour(grey);
+    color: getColour(black);
+    width: 80%;
+    align-self: center;
+    text-align: center;
+  }
+
+  hr {
+    width: 80%;
+    color: getColour(grey);
+  }
+}
+
+.registerForm {
+  height: 650px;
+}
+
+.loginBtn,
+.newAccountBtn,
+.registerBtn {
+  padding: 10px;
+}
+
+.registerBtn {
+  margin-top: 20px;
+}
+
+//Post details form
+
+.commentReactionContainer,
+.commentContainer {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  justify-content: flex-end;
+}
+
+.commentReactionContainer {
+  border-top: 1px solid getColour(green);
+}
+
+.commentContainer {
+  margin-bottom: 30px;
+
+  textarea {
+    width: 100%;
+    margin-bottom: 5px;
+    border: $border;
+    padding: 8px;
+    max-width: 100%;
+  }
+
+  .commentBtn {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.reactionSymbols {
+  align-self: end;
+  margin-right: 15px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+
+  i {
+    margin-right: 5px;
+  }
+
+  p {
+    font-size: 24px;
+    margin-top: 5px;
+  }
+}

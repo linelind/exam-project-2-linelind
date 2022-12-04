@@ -1,0 +1,149 @@
+.avatar {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 100%;
+  z-index: 1;
+  background-color: getColour(white);
+
+  @media (max-width: $small-width) {
+    height: 70px;
+    width: 70px;
+  }
+
+  img {
+    width: 100%;
+    position: absolute;
+    min-height: 100%;
+    object-fit: cover;
+  }
+}
+
+.avatarCreate {
+  height: 70px;
+  width: 70px;
+}
+
+.avatarSmall {
+  height: 60px;
+  width: 60px;
+
+  @media (max-width: $small-width) {
+    height: 50px;
+    width: 50px;
+  }
+
+  @media (max-width: $smallest-width) {
+    display: none;
+  }
+}
+
+.avatarTiny {
+  height: 45px;
+  width: 45px;
+
+  @media (max-width: $medium-width) {
+    display: none;
+  }
+}
+
+.cta {
+  border-radius: 2px;
+  background-color: getColour(green);
+  border: none;
+  padding: 5px 10px;
+  color: getColour(white);
+}
+
+.editBtn,
+.unfollowBtn,
+.cancelBtn,
+.cancelBtn:hover {
+  border: $border-thin;
+  background-color: getColour(white);
+  padding: 5px 10px;
+  color: getColour(green);
+}
+
+.deleteBtnSmall,
+.deleteBtnSmall:hover {
+  background-color: getColour(black);
+}
+
+.hoverBtn:hover {
+  box-shadow: $shadow-bottom !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.errorMessage {
+  border: 1px solid getColour(error);
+  background-color: getColour(error-light);
+  color: getColour(error);
+}
+
+.errorMain {
+  margin-top: 50px !important;
+  max-width: 380px;
+  margin: auto;
+}
+
+.successMessage {
+  border: 1px solid getColour(success);
+  background-color: getColour(success-light);
+  color: getColour(success);
+}
+
+.errorMessage,
+.successMessage {
+  padding: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+.loaderContainer {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 50px;
+
+  .loaderColour {
+    color: getColour(green) !important;
+  }
+}
+
+.modalImage {
+  width: 100%;
+}
+
+.imageModalHover {
+  position: relative;
+}
+
+.imageModalHoverAvatar:before,
+.imageModalHoverBanner:before {
+  display: block;
+  content: " ";
+  position: absolute;
+  z-index: 100;
+  background: #34343424;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+}
+
+.imageModalHoverAvatar:before {
+  border-radius: 100%;
+}
+
+.imageModalHover:hover:before {
+  opacity: 1;
+  cursor: pointer;
+}

@@ -1,0 +1,185 @@
+body {
+  font-family: $font-primary;
+  color: getColour(black);
+
+  .logo {
+    font-family: $font-logo;
+    font-size: 20px;
+
+    @media (max-width: $small-width) {
+      font-size: 18px;
+    }
+  }
+
+  .logInLogo {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 0;
+
+    @media (max-width: $small-width) {
+      font-size: 24px;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: getColour(black);
+  }
+
+  a > *:hover,
+  .postCardHover > *:hover,
+  .postCardImage:hover,
+  .postHeader > *:hover {
+    color: getColour(green) !important;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: $font-headings;
+  }
+
+  h1 {
+    font-size: 26px;
+
+    @media (max-width: $small-width) {
+      font-size: 18px;
+    }
+  }
+
+  .postAuthor {
+    font-size: 21px;
+
+    @media (max-width: $small-width) {
+      font-size: 16px;
+    }
+  }
+
+  .postTitle {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 50px;
+
+    @media (max-width: $small-width) {
+      font-size: 14px;
+    }
+  }
+
+  p {
+    font-size: 16px;
+
+    @media (max-width: $small-width) {
+      font-size: 12px;
+    }
+  }
+
+  .cta {
+    @media (max-width: $small-width) {
+      font-size: 12px;
+    }
+  }
+
+  .editBtn,
+  .logInBtn,
+  .logOutBtn,
+  .followBtn,
+  .unfollowBtn,
+  .updatePostBtn,
+  .deleteBtn,
+  .loginBtn,
+  .newAccountBtn,
+  .editProfileBtn,
+  .cancelBtn,
+  .deleteBtnSmall {
+    font-size: 14px !important;
+
+    @media (max-width: $small-width) {
+      font-size: 12px !important;
+    }
+  }
+
+  .addImageBtn,
+  .addTagsBtn,
+  .createPostBtn {
+    @media (max-width: $medium-width) {
+      font-size: 12px !important;
+    }
+  }
+
+  .feedTitle,
+  .editHeading,
+  .postDetailTitle {
+    text-align: center;
+    font-family: $font-logo;
+    font-size: 28px;
+
+    @media (max-width: $small-width) {
+      font-size: 24px;
+    }
+  }
+
+  .feedTitle {
+    margin-top: 50px;
+  }
+
+  .postDetailTitle {
+    margin-top: 20px;
+  }
+
+  .date {
+    font-size: 12px;
+    margin-top: -5px;
+
+    @media (max-width: $small-width) {
+      font-size: 10px;
+    }
+  }
+
+  .commentOwner {
+    font-size: 14px;
+    margin-bottom: 18px;
+    margin-top: 20px;
+
+    @media (max-width: $small-width) {
+      font-size: 12px;
+      margin-bottom: 14px;
+    }
+  }
+
+  label,
+  .search {
+    font-size: 12px;
+  }
+
+  .fa-heart,
+  .fa-comment {
+    font-size: 24px;
+    color: getColour(green);
+  }
+
+  .nav-link {
+    @media (max-width: $small-width) {
+      font-size: 12px;
+    }
+  }
+
+  .profileCard {
+    h2 {
+      @media (max-width: $medium-width) {
+        font-size: 16px !important;
+      }
+    }
+  }
+
+  .modal-title {
+    @media (max-width: $medium-width) {
+      font-size: 14px !important;
+    }
+  }
+
+  .modal-body {
+    @media (max-width: $medium-width) {
+      font-size: 12px !important;
+    }
+  }
+}

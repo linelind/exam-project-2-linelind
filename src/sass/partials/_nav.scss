@@ -1,0 +1,157 @@
+.navBar {
+  background-color: getColour(white);
+  padding: 10px 30px;
+  box-shadow: $shadow-bottom;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  .navElementsContainer {
+    display: flex;
+    align-items: center;
+  }
+
+  .navContainer {
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+  }
+
+  .navLinksContainer a {
+    margin-right: 25px;
+  }
+
+  .logOutBtn,
+  .logInBtn {
+    margin-right: 20px;
+  }
+
+  .logInBtn:hover {
+    color: getColour(white);
+  }
+
+  .fa-user,
+  .fa-bars {
+    font-size: 28px;
+  }
+
+  .fa-user:hover,
+  .logo:hover {
+    color: getColour(black) !important;
+  }
+
+  a:hover {
+    color: getColour(green) !important;
+  }
+
+  .close,
+  .fa-bars {
+    cursor: pointer !important;
+  }
+
+  .navMobile {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 40px;
+    width: 250px;
+    height: 100vh;
+    position: absolute;
+    background-color: getColour(white);
+    top: 0px;
+    right: 0px;
+    box-shadow: $shadow;
+    z-index: 100;
+    animation: animateright 0.6s;
+
+    @keyframes animateright {
+      0% {
+        right: -330px;
+        opacity: 0;
+      }
+      100% {
+        right: 0;
+        opacity: 1;
+      }
+    }
+  }
+
+  .navMobileHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: $border;
+    margin-bottom: 30px;
+
+    h2,
+    p {
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+// breadcrumb
+
+.navBreadcrumb {
+  width: 80%;
+  background-color: none !important;
+  box-shadow: none !important;
+  margin-top: 20px;
+  z-index: 1;
+
+  .active,
+  a:hover {
+    color: getColour(green);
+  }
+}
+
+// Tabs
+
+.navTabsProfile {
+  width: 80%;
+  margin-top: 30px;
+  margin-bottom: 100px;
+
+  @media (max-width: $medium-width) {
+    width: 100%;
+  }
+
+  @media (max-width: $smallest-width) {
+    display: flex;
+    flex-direction: column;
+
+    .active {
+      border: none;
+      text-decoration: underline;
+    }
+  }
+}
+
+.nav-link {
+  color: getColour(green) !important;
+}
+
+.navTabsFeed {
+  margin-top: 50px;
+  margin-bottom: 10px;
+
+  .nav-item button {
+    background-color: getColour(grey) !important;
+    border: none !important;
+  }
+
+  .nav-item .active {
+    border-bottom: $border !important;
+  }
+}

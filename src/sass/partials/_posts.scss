@@ -1,0 +1,112 @@
+.postCard {
+  background-color: getColour(white);
+  margin: 40px 20px 70px 20px;
+  width: 500px !important;
+  padding: 20px;
+  box-shadow: $shadow;
+
+  @media (max-width: $medium-width) {
+    max-width: 90vw !important;
+  }
+
+  .postHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: -20px;
+    padding: 15px 20px;
+    box-shadow: $shadow-bottom;
+
+    .postInfoContainer {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      h2 {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .postCardImage {
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .tagsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .tagItem {
+      color: getColour(green);
+      margin-right: 15px;
+    }
+  }
+
+  .iconContainer {
+    border-top: $border-thin;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 15px 20px 0px 20px;
+    text-align: right;
+    min-height: 45px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+
+    .PostCardCommentInfo,
+    .PostCardReactionInfo {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    p {
+      margin: 0;
+      color: getColour(green);
+    }
+  }
+}
+
+.btnReact {
+  border: 0;
+  background: none;
+  padding: 5px;
+  font-size: 22px;
+  margin: 0;
+  cursor: pointer;
+  text-align: left;
+  width: fit-content;
+}
+
+.reactionSymbols {
+  width: 50px;
+  display: flex;
+}
+
+.editBtnDetails {
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.commentsContainer {
+  display: flex;
+  flex-direction: column-reverse;
+
+  .comment {
+    padding: 20px 15px 15px 15px;
+    border-top: 1px solid getColour(green);
+  }
+
+  .commentOwnerContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .date {
+    margin-top: -15px;
+  }
+}

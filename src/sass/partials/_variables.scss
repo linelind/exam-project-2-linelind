@@ -1,0 +1,29 @@
+$font-logo: "Leckerli One", cursive;
+$font-headings: "Quicksand:wght@700", sans-serif;
+$font-primary: "Quicksand:wght@400", sans-serif;
+
+$smallest-width: 350px;
+$small-width: 500px;
+$medium-width: 550px;
+$large-width: 650px;
+
+$shadow: 1px 0px 5px rgba(96, 101, 100, 0.29);
+$shadow-bottom: 0 4px 4px rgba(197, 199, 199, 0.29);
+$border: 2px solid #00825e;
+$border-thin: 1px solid #00825e;
+
+$colours: (
+  green: #00805c,
+  black: #0e0e0e,
+  grey: #f5f5f5,
+  white: #fff,
+  dark-grey: #cacccb,
+  error: #6c0a0a,
+  error-light: #fce6e6,
+  success: #0a6c52,
+  success-light: #e4f3ef,
+);
+
+@function getColour($colour) {
+  @return map-get($colours, $colour);
+}
